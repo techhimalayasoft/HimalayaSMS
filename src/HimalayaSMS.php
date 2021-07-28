@@ -12,13 +12,13 @@ class HimalayaSMS {
 	public static function getApiUrl() { return config('HimalayaSMS.api_endpoint'); }
 	public static function getSendUrl() { return HimalayaSMS::getApiUrl().config('himalayasms.methods.send'); }
 
-	public static function send( $to = Null, $text = Null)
+	public static function send( $to = Null, $text = Null, $senderid = Null, $campaign = Null, $routeid = Null, $key = Null)
 	{
 		if ( is_null($to) || is_null($text) ) return json_encode(['response_code' => 404, 'response' => 'Required Fields Missing.']);
-		$senderid = HimalayaSMS::getSender();
-		$key = HimalayaSMS::getKey();
-		$campaign = HimalayaSMS::getCampaign();
-		$routeid = HimalayaSMS::getRouteId();
+		$senderid = is_null($senderid) ? HimalayaSMS::getSender() : $senderid;
+		$key = is_null($key) ? HimalayaSMS::getKey() : $key;
+		$routeid = is_null($routeid) ? HimalayaSMS::getRouteId() : $routeid;
+		$campaign = is_null($campaign) ? HimalayaSMS::getCampaign() : $campaign;
 		$type = HimalayaSMS::getType();
 
 		$client = new Client();

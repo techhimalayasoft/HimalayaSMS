@@ -16,8 +16,8 @@ use HimalayaSMS;
 ### Send an SMS
 ```php
 
-$to = '9801234567'; // Setting Phone Number
-$message = 'Test message from Sparrow.'; // Setting Message
+$to = '98########'; // Setting Phone Number
+$message = 'Test message.'; // Setting Message
 
 // Send the message
 $sms_message = HimalayaSMS::send($to, $message);

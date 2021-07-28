@@ -15,6 +15,6 @@ return [
     // Do not edit the values below here unless necessary.
     'api_endpoint' => 'https://sms.techhimalaya.com/base/smsapi/index.php',
     'methods' => [
-        'send' => 'sms/',
+        'send' => 'https://sms.techhimalaya.com/base/smsapi/index.php',
     ]
 ];

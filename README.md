@@ -1,5 +1,6 @@
 Himalaya SMS Laravel Package
 =============================
+https://packagist.org/packages/techhimalayasoft/himalayasms
 
 Himalaya SMS Laravel Package can be used to send SMS via Himalaya SMS.
 

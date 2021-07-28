@@ -1,0 +1,32 @@
+{
+    "name": "techhimalayasoft/himalayasms",
+    "description": "Laravel Package to send SMS via Himalaya SMS",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tech Himalaya",
+            "email": "info@techhimalaya.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php" : "^7.0|^8.0",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "techhimalayasoft\\HimalayaSMS\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "techhimalayasoft\\HimalayaSMS\\HimalayaSMSServiceProvider"
+            ],
+            "aliases": {
+                "HimalayaSMS": "techhimalayasoft\\HimalayaSMS\\HimalayaSMS"
+            }
+        }
+    }
+}

@@ -25,10 +25,10 @@ $campaign = ''
 $routeid = ''
 $key = ''
 $to = '98########'; // Setting Phone Number
-$message = 'Test message.'; // Setting Message
+$text = 'Test message.'; // Setting Message
 
 // Send the message
-$sms_message = HimalayaSMS::send($to, $message, $senderid, $campaign, $routeid, $key);
+$sms_message = HimalayaSMS::send($to, $text, $senderid, $campaign, $routeid, $key);
 // This will return a pseudo JSON response, you will need to json_decode it.
 ```
 
